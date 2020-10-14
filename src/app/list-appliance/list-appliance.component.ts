@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Appliance } from './appliance';
 
 @Component({
   selector: 'app-list-appliance',
@@ -7,14 +8,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListApplianceComponent implements OnInit {
 
-  electrodomestico={
+  electrodomesticos : Appliance[]=[
+    {
     "name":"televisor",
     "price": 300,
     "brand":"sony",
     "promotion":"3 cuotas sin interes",
-    "image":"assets/img/tele.png"
-
+    "image":"assets/img/tele.png",
+     "Stock":1
+  },
+  {
+    "name":"celular",
+    "price": 50000,
+    "brand":"motorola",
+    "promotion":"12 cuotas sin interes",
+    "image":"assets/img/CELULAR.png",
+    "Stock":0
+  },
+  {
+    "name":"PC",
+    "price": 300,
+    "brand":"LENOVO",
+    "promotion":"6 cuotas sin interes",
+    "image":"assets/img/LENOVO.png",
+    "Stock":1
   }
+  ];
+
 
   constructor() { }
 
