@@ -7,22 +7,13 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-link" href="#">Contacto</a>
+      <a class="nav-link" [routerLink]="['/about']">Contacto</a>
       <a class="nav-link" href="#">Ubicacion</a>
-      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
     </div>
   </div>
-  <nav class="navbar ngnavbar-light bg-light">
-    <a class="navbar-brand" href="#">
-      <img src="assets/img/carrito.png" width="30" height="30" class="d-inline-block align-top" alt="">
-  
-    </a>
-  </nav>
-</nav>
+ </nav>
 <div class="container">
-  <div class="row">
- <app-list-appliance></app-list-appliance>
-</div>
+  <router-outlet></router-outlet>
 </div>
   <div class="container-fluid">
 <footer>{{title}} 2020</footer>

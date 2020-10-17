@@ -6,6 +6,7 @@ export interface Appliance {
     promotion:String,
     image:String,
     Stock:number
+    quantity:number;
 
   } 
   

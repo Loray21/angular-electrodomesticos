@@ -1,14 +1,17 @@
 <div class="row">
 <div class="col-md-4" *ngFor="let a of electrodomesticos">
-    <img src="{{a.image}}"  width="350" alt="..." class="img-rounded">
+    <img src="{{a.image}}"  width="350" alt="..." class="hoverImage">
     <h3 >{{a.name}}</h3>
     <p>{{a.price}}</p> 
     <p>{{a.brand}}</p> 
     <p>{{a.promotion}}</p> 
+     <button  class="btn btn-secondary" (click)= "downQuantity(a)" >-</button>
+    <input type="tel" [(ngModel)]="a.quantity" (keyup)="OnChangeQuantity($event , a)" >
+    <button  (click)=  "upQuantity(a)" class="btn btn-secondary" >+</button>
    <p><span *ngIf="a.Stock==0" class="badge badge-warning">SIN STOCK</span></p>
 
 
-    <a class="btn btn-primary" href="#" role="button">Agregar</a>
+    <a class="btn btn-primary"    href="#" role="button">Agregar</a>
 
     </div>
-        </div>
+        </div>>
