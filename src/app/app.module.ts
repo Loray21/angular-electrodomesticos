@@ -7,14 +7,16 @@ import { ListApplianceComponent } from './list-appliance/list-appliance.componen
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { FormsModule } from '@angular/forms';
 import { ApplainceAboutComponent } from './applaince-about/applaince-about.component';
-import { ZoutApplaincesComponent } from './zout-applainces/zout-applainces.component'
+import { ZoutApplaincesComponent } from './zout-applainces/zout-applainces.component';
+import { InputIntegerComponent } from './input-integer/input-integer.component'
 @NgModule({
   declarations: [
     AppComponent,
     ListApplianceComponent,
     ShoppingCartComponent,
     ApplainceAboutComponent,
-    ZoutApplaincesComponent
+    ZoutApplaincesComponent,
+    InputIntegerComponent
   ],
   imports: [
     BrowserModule,

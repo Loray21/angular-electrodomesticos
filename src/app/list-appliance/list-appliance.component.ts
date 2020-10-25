@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { eventNames } from 'process';
+import { ApplianceCartService } from '../appliance-cart.service';
 import { Appliance } from './appliance';
 
 @Component({
@@ -9,14 +10,14 @@ import { Appliance } from './appliance';
 })
 export class ListApplianceComponent implements OnInit {
 
-  electrodomesticos : Appliance[]=[
+  appliances : Appliance[]=[
     {
     "name":"televisor",
     "price": 300,
     "brand":"sony",
     "promotion":"3 cuotas sin interes",
     "image":"assets/img/tele.png",
-     "Stock":1,
+     "Stock":4,
      "quantity":0,
   },
   {
@@ -25,7 +26,7 @@ export class ListApplianceComponent implements OnInit {
     "brand":"motorola",
     "promotion":"12 cuotas sin interes",
     "image":"assets/img/CELULAR.png",
-    "Stock":0,
+    "Stock":2,
     "quantity":0,
   },
   {
@@ -40,27 +41,15 @@ export class ListApplianceComponent implements OnInit {
   ];
 
 
-  constructor() { }
+  constructor(private cart: ApplianceCartService) {
+   }
 
   ngOnInit(): void {
   }
-
-  upQuantity(a:Appliance):void{
-    if(a.quantity<a.Stock)
-    a.quantity ++;
+  addToCart(appliance: Appliance) {
+ this.cart.addToCart(appliance);
+ appliance.Stock-=appliance.quantity;
+ appliance.quantity=0;
+  }
   }
 
-  
-  downQuantity(a:Appliance):void{
-    if(a.quantity>0){
-    a.quantity --;
-  }
-}
-OnChangeQuantity(event , a:Appliance):void{
-  if(event.tarjet.value<0){
-    let aux=event.tarjet.value*-1;
-    a.quantity= aux;
-
-}
-}
-}
