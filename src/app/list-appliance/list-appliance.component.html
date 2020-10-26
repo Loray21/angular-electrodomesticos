@@ -6,8 +6,9 @@
     <p>{{appliance.brand}}</p> 
     <p>{{appliance.promotion}}</p> 
     <p><span *ngIf="appliance.Stock==0" class="badge badge-warning">SIN STOCK</span></p>
-    <app-input-integer [appliance]="appliance.quantity" (maxReached)="maxReached($event)" [max]="appliance.Stock"></app-input-integer>
+    <app-input-integer [(quantity)]="appliance.quantity" (maxReached)="maxReached($event)" [(max)]="appliance.Stock"></app-input-integer>
     <button class="btn btn-primary"  (click)= addToCart(appliance)>Agregar</button>
+    cnat:{{appliance.quantity}}
 
     </div>
         </div>

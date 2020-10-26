@@ -45,14 +45,14 @@ maxReachead:EventEmitter<String>= new EventEmitter<String>();
   }
 }
 OnChangeQuantity(event ):void{
- /* if(event.tarjet.value<0){
+  if(event.tarjet.value<0){
     alert("no puede ")
     let aux=event.tarjet.value=this.max;
     this.quantity= aux;
     this.quantitychange.emit(this.quantity);
 
 
-}*/
+}
 }
 
 }
