@@ -16,19 +16,18 @@ export class InputIntegerComponent implements OnInit {
   @Input()
   max: number;
 @Output()
-quantitychange :EventEmitter<Number>= new EventEmitter<Number>();
+quantityChange :EventEmitter<Number>= new EventEmitter<Number>();
 @Output()
-maxReachead:EventEmitter<String>= new EventEmitter<String>();
+maxReachead:EventEmitter<string>= new EventEmitter<string>();
   ngOnInit(): void {
     
   }
   upQuantity():void{
     if(this.quantity<this.max){
     this.quantity ++;
-    this.quantitychange.emit(this.quantity);
+    this.quantityChange.emit(this.quantity);
   }else{
     this.maxReachead.emit("se alcanzo el max");
-    alert("maximo de stock");
   }
 }
 
@@ -36,7 +35,7 @@ maxReachead:EventEmitter<String>= new EventEmitter<String>();
   downQuantity():void{
     if(this.quantity>0){
     this.quantity --;
-    this.quantitychange.emit(this.quantity);
+    this.quantityChange.emit(this.quantity);
 
   }else{
 
@@ -49,7 +48,7 @@ OnChangeQuantity(event ):void{
     alert("no puede ")
     let aux=event.tarjet.value=this.max;
     this.quantity= aux;
-    this.quantitychange.emit(this.quantity);
+    this.quantityChange.emit(this.quantity);
 
 
 }

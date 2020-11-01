@@ -51,5 +51,10 @@ export class ListApplianceComponent implements OnInit {
  appliance.Stock-=appliance.quantity;
  appliance.quantity=0;
   }
+
+  maxReachead(m:string){
+    alert(m);
+
+  }
   }
 
