@@ -28,6 +28,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Capture
 
- ![alt text](https://drive.google.com/drive/folders/1ohEfrGhtlNF9gRu1A1BidDNfu4JT8nVw) 
+ ![alt text](https://drive.google.com/file/d/1joZlIPWvqMpu7WccQkH2hsC74r-uan7H/view?usp=sharing) 
 
 
